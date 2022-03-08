@@ -13,5 +13,8 @@
       2. Square root
       3. Fraction(1/x)
       4. Percentage(x%100)
- 
+   
+### Try it >>>>
+#### "## Use this link :  https://seenu7120.github.io/Calculator-using-js/ "
+
 "## Also add light and dark theme feature(coming soon........) "
