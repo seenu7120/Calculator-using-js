@@ -1,4 +1,4 @@
-" ## Designing a Calculator using HTMLl5,CSS3 and JavaScript....."
+" ## Designing a Calculator using HTML5,CSS3 and JavaScript....."
 
 "## It is fully functional one.... you can perform and play with following operations "
    
