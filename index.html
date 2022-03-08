@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="calculator-container">
+        <div id="display-box">
+            <span id="display-content">0</span>
+        </div>
+
+        <div id="controls-box">
+           
+            <div class="controls controls-top">
+                <button class="theme-button" onclick="theme('')">Theme</button>
+                <button class="controls-button" onclick="controlUnaryFunction('%')">%</button>
+                <button class="clear-button" onclick="clearFunction('clear')">&#x232B;</button>
+                <button class="clear-button" onclick="clearEverythingFunction('clear-all')">C</button>
+            </div>
+
+            <div class="controls">
+                <button class="controls-button" onclick="controlUnaryFunction('sqrt')">&#x221A;x</button>
+                <button class="controls-button" onclick="controlUnaryFunction('sqre')">x<sup>2</sup></button> <!-- x&sup2; or x&#xB2; also work -->
+                <button class="controls-button" onclick="controlUnaryFunction('fraction')">1/x</button>
+                <button class="controls-button" onclick="controlBinaryFunction('/')">&#247;</button> <!-- &divide also work-->
+            </div>
+
+            <div class="digits" >
+                <button class="digits-button btn7" onclick="digitFunction('7')">7</button>
+                <button class="digits-button btn8" onclick="digitFunction('8')">8</button>
+                <button class="digits-button btn9" onclick="digitFunction('9')">9</button>
+                <button class="controls-button" onclick="controlBinaryFunction('*')">*</button>
+            </div>
+
+            <div class="digits" >
+                <button class="digits-button btn4"  onclick="digitFunction('4')">4</button>
+                <button class="digits-button btn5" onclick="digitFunction('5')">5</button>
+                <button class="digits-button btn6" onclick="digitFunction('6')">6</button>
+                <button class="controls-button" onclick="controlBinaryFunction('-')">-</button>
+            </div>
+            
+            <div class="digits" >
+                <button class="digits-button btn1" onclick="digitFunction('1')">1</button>
+                <button class="digits-button btn2" onclick="digitFunction('2')">2</button>
+                <button class="digits-button btn3" onclick="digitFunction('3')">3</button>
+                <button class="controls-button" onclick="controlBinaryFunction('+')">+</button>
+            </div>
+            
+            <div class="controls">
+                <button class="controls-button" onclick="decimalFunction('decimal')">.</button>
+                <button class="digits-button btn0" onclick="digitFunction('0')">0</button>
+                <button class="digits-button btn00" onclick="digitFunction('00')">00</button>
+                <button class="controls-evaluate-button" onclick="evaluateFunction()">=</button>
+            </div>
+
+        </div>
+    </div>    
+</body>
+    <script src="script.js"></script>
+</html>
