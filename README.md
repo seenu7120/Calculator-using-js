@@ -1,4 +1,6 @@
-" ## Designing a Calculator using HTML5,CSS3 and JavaScript....."
+" ## Designing a Calculator using HTML5, CSS3 and JavaScript....."
+
+"## It have a light and dark mode feature "
 
 "## It is fully functional one.... you can perform and play with following operations "
    
@@ -13,8 +15,8 @@
       2. Square root
       3. Fraction(1/x)
       4. Percentage(x%100)
-   
+      
+  
 ### Try it >>>>
 #### "## Use this link :  https://seenu7120.github.io/Calculator-using-js/ "
 
-"## Also add light and dark theme feature(coming soon........) "
