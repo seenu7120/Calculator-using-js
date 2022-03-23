@@ -294,11 +294,28 @@ let decimalBtn  =opertorButton[8].addEventListener("click",OperatorClick);
 
 /********************************************************/
 /****************** Theme  **************/
-function ThemeClick(){
+// function ThemeClick(){
+//     const audio4=new Audio();
+//     audio4.src="./click-sounds/theme-button.mp3";
+//     audio4.play();
+
+//     return;
+// }
+
+// let themebtnSound  =themeButton.addEventListener("click",ThemeClick);
+
+function ThemeBtnClick(){
+    let themeButton=document.getElementsByClassName("theme-button")[0];
+
+    document.body.classList.toggle("dark-mode");
+    
+    (themeButton.innerText==="Dark") ? themeButton.innerText="Light" : themeButton.innerText="Dark";
+
     const audio4=new Audio();
     audio4.src="./click-sounds/theme-button.mp3";
     audio4.play();
+
     return;
 }
-let themeButton=document.getElementsByClassName("theme-button")[0];
-let themebtn  =themeButton.addEventListener("click",ThemeClick);
+
+/* **************************  Completed     ******************************* */

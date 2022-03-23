@@ -1,12 +1,62 @@
+
 body{
     margin: 0;
     padding: 0;
-    height: 80vh;
+    height: 100vh;
     font-family: sans-serif;
     box-sizing: border-box;
-    /* background: linear-gradient(180deg,blue,rgb(174, 174, 211)); */
-    background-color: rgb(91, 91, 190);
+    background-color: var(--color-body);
+    color: var(--color-black);
+
+    /* light mode */
+    /* background colors */
+    --color-body: rgba(91, 91, 190, 1);
+    --color-container : #ecf0f3;
+    --color-display-box: lightslategray;
+    --color-digit-btn : lightgreen;
+    --color-eval-btn : lightcoral;
+    --color-controls-btn: #ecf0f3;
+    --color-clear-btn : #ecf0f3;
+    --color-theme-btn : rebeccapurple;
+
+    /* text colors (end with color(eg: --color-btn-color) )*/
+    --color-display-color:whitesmoke;
+    --color-digit-color : rgb(51, 47, 47);
+    --color-eval-btn-color: #ffffff;
+    --color-controls-btn-color:rgb(70, 66, 66);
+    --color-clear-btn-color : red;
+    --color-theme-btn-color:whitesmoke;   
+
+    --color-border : rgba(0,0,0,0.1);
+    --color-shadow : #ffffff;
+    --color-blink : lightgreen;
 }
+
+.dark-mode{
+    /* background colors */
+    --color-body: rgb(51, 47, 47);
+    --color-container : rgb(102, 98, 99); 
+    --color-display-box: rgba(87, 99, 207, 0.692);
+    --color-digit-btn : rebeccapurple ;
+    --color-eval-btn : rgb(28, 16, 136);
+    --color-controls-btn: rgb(173, 169, 224);
+    --color-clear-btn : rgb(243, 242, 247);
+    --color-theme-btn : lightgreen ;
+
+    /* text colors (end with color(eg: --color-btn-color) )*/
+    --color-display-color:whitesmoke;
+    --color-digit-btn-color : whitesmoke;
+    --color-eval-btn-color : rgb(208, 208, 224);
+    --color-clear-btn-color : rgb(50, 93, 185);
+    --color-controls-btn-color: whitesmoke; 
+    --color-theme-btn-color:rgb(51, 47, 47);   
+
+    --color-border: rgb(127, 128, 131); 
+    --color-shadow : rgb(208, 208, 224);
+    --color-blink : rgb(58, 207, 212);
+
+}
+
 /************************* calculator container *****************************/
 #calculator-container{
     height: 450px;
@@ -16,8 +66,8 @@ body{
     margin-top: 80px;
     border-radius: 20px;
     border: none;
-    background-color: #ecf0f3;                     
-    box-shadow: 0px 0px 5px #ffffff;
+    background-color: var(--color-container);                     
+    box-shadow: 0 0 5px var(--color-shadow);
 }
 /************************* display box  *************************************/
 #display-box{
@@ -28,22 +78,22 @@ body{
     display: flex;
     justify-content:flex-end;
     align-items: flex-end;
-    background-color: lightslategray;
-    box-shadow:inset -5px -5px 10px rgba(0,0,0,.25),
+    background-color: var(--color-display-box);
+    box-shadow:inset -5px -6px 10px rgba(0,0,0,.25),
                inset 5px 5px 10px rgba(0,0,0,.25) ;
     border-radius: 20px;
-    border: 2px solid whitesmoke;
-    color: #ffffff;
+    border: 2px solid var(--color-border);
+    color: var(--color-display-color);
     overflow: hidden;
 }
 #display-content{
     padding-right: 2px ;
-    border-right: 1px solid lightslategray;
+    border-right: 1px solid var(--color-display-box);
     animation: blinking 1s infinite;
 }
 @keyframes blinking {
     50% {
-        border-color: lightgreen;
+        border-color: var(--color-blink);
 
     }
 }
@@ -51,7 +101,6 @@ body{
 #controls-box{
     height: 350px;
     width: 100%;
-    /* background:linear-gradient(180deg,rgb(63, 63, 173),violet); */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;   
@@ -64,7 +113,6 @@ body{
 }
 /************************* controls buttons (operator buttons)  *************************************/
 button{
-    background-color: #ecf0f3;
     box-shadow:-5px -5px 10px rgba(0,0,0,.16),
                 5px 5px 10px rgba(0,0,0,.3);
 }
@@ -79,36 +127,45 @@ button:hover{
 .controls-evaluate-button{
     width: 40px;
     height: 40px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     border-radius: 50%; 
     border: none; 
 }
+/************************* controls button  *************************************/
+.controls-button{
+    color:var(--color-controls-btn-color);
+    background-color: var(--color-controls-btn);
+}
+
 /************************* digit button  *************************************/
 .digits-button{
-    background-color: lightgreen;
+    color:var(--color-digit-btn-color);
+    background-color: var(--color-digit-btn);
 }
 /************************* evalute button  *************************************/
 .controls-evaluate-button{
-    background-color: lightcoral;
-    color: #ecf0f3;
+    background-color: var(--color-eval-btn);
+    color: var(--color-eval-btn-color);
 }
 /************************* clear button  *************************************/
 .clear-button{
-    /* background-color: rgb(238, 247, 238); */
-    background-color:bisques;
-    color: red;
+    background-color: var(--color-clear-btn);
+    color: var(--color-clear-btn-color);
     font-size: 1.3rem;
 }
 /************************* theme button  *************************************/
 .theme-button{
-    width: 50px;
-    height: 40px;
+    width: 60px;
+    height: 35px;
+    margin-left: -6px;
     font-size: 0.8rem;
-    border-radius: 12px;
-    background-color: rebeccapurple; 
-    color: aliceblue;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: var(--color-theme-btn); 
+    color: var(--color-theme-btn-color);
     border: none; 
 }
 
 
-/* aslo add the light and dark theme feature(coming soon...........) */
+/* **************************  Completed     ******************************* */
